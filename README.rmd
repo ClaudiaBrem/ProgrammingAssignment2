@@ -1,0 +1,34 @@
+---
+title: "README"
+author: "Claudia Brem"
+date: "21 Januar 2018"
+output: html_document
+---
+
+Getting and Cleaning Data - Coursera Project
+
+This is the project for the course Getting and Cleaning Data. The source file is run_analysis.R. 
+My script does the following:
+
+Assume that the data has already been downloaded and unzipped manually. 
+
+Read the data about features and activity, the training and the test data.
+
+Rename the columns of the data frames. 
+
+Merge the training and test data into one data set, respectively.
+
+Combine test and training data into one large data set called final_data. 
+
+Extracts only the measurements on the mean and the standard deviation. 
+	First, a logical vector is created. 
+	Its entries are true if the column name of final_data contain "subject_id", "mean()", "std()" or "activity_id".
+	Then, only the respective columns of final_data are kept.
+
+Information about activity is added by merging final_data with the activity labels. 
+
+The columns are assigned descriptive names by replacing "t" by "time", for example. 
+
+Creates a second, tidy data set with the average of each variable for each activity and each subject. 
+
+Writes the result in a text file called tidy_data.txt 
